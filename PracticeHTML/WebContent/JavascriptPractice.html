@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<meta name="description" content="Javascript Web Practice">
+<meta name="keywords" content="javascript">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/PracticeHTML/js/ExternalJavascript.js"></script>
+
+<script>
+	var cars = ["abc","def","ghd"];
+	var person = {
+			firstName : "daehyeok",
+			lastName : "kim",
+			age : 27,
+			eyeColor : "black"
+			fullname : function()
+			{
+				return this.firstName + this.lastName;
+			}
+	};
+	
+	function alertObject()
+	{
+		alert("My Name is : " + person.firstName + " " + person.lastName);
+	}
+	
+	function alertCarsArray(index)
+	{
+		window.alert(cars[index]);		
+	}
+	
+	function pChangeTest()
+	{
+		document.getElementById("demo").innerHTML="change.";		
+	}
+	
+	function innerHTMLChangeTest(text)
+	{
+		document.getElementById('demo2').innerHTML= text;
+	}
+
+	function callObjectFunction()
+	{
+		alert(document.getElementById('objectFunctionCall').innerHTML = person['fullname']);
+		document.getElementById('objectFunctionCall').innerHTML = person['fullname'];
+	}
+	
+</script>
+
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1> Javascript Header</h1>
+<p id = "demo"> This is Practice Page</p>
+<p id = "demo2"> This is innerHTML changed</p>
+<p id = "calculate"> This is calculate </p>
+<p id = "objectFunctionCall">Object Function Call</p>
+
+<button type = "button" onclick="pChangeTest()">Click This Button(Change Test)</button>
+<button type = "button" onclick="externalFunction()">External Function Test</button>
+<button type = "button" onclick="innerHTMLChangeTest('changeText')">innerHTML Change</button>
+<button type = "button" onclick="alertCarsArray(2)">Array Print</button>
+<button type = "button" onclick="alertObject()">Alert Object Button</button>
+<button type = "button" onclick="callObjectFunction()">call Object Function</button>
+
+</body>
+
+</html>

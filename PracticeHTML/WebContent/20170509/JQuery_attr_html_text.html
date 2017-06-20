@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        alert("Text: " + $("#test").text());
+    });
+    $("#btn2").click(function(){
+        alert("HTML: " + $("#test").html());
+    });
+    
+    $("#btn3").click(function(){
+    	alert("val : " + $("#valTest").val());
+    });
+    
+    $("#btn4").click(function(){
+    	alert("attr : " + $("#w3s").attr("href"));
+    });
+    
+    $("#setBtn1").click(function(){
+        $("#test1").text("Hello world!");
+    });
+    $("#setBtn2").click(function(){
+        $("#test2").html("<b>Hello world!</b>");
+    });
+    $("#setBtn3").click(function(){
+        $("#test3").val("Dolly Duck");
+    });
+    
+    $("#setBtn4").click(function(){
+        $("#setW3s").attr({
+        	"href" : "http://www.yahoo.co.kr",
+            "title" : "yahoo go"
+        });
+    });
+});
+</script>
+
+<body>
+
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+<p >Name: <input type="text" id="valTest" value="Mickey Mouse"></p>
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
+<button id="btn3">Show val</button>
+<button id="btn4">Show href</button>
+
+<p id="test1">This is a paragraph.</p>
+<p id="test2">This is another paragraph.</p>
+<p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+<button id="setBtn1">Set Text</button>
+<button id="setBtn2">Set HTML</button>
+<button id="setBtn3">Set Value</button>
+
+<p><a href="https://www.w3schools.com" title="some title" id="setW3s">W3Schools.com</a></p>
+<button id="setBtn4">Set Value</button>
+
+</body>
+</html>

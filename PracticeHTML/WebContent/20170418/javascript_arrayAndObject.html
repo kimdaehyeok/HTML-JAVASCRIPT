@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<p id="demo">This is Demo</p>
+	<p id="demo2">This is Demo2</p>
+	<p id="demo3">This is Demo3</p>
+	<p id="demo4">This is Demo4</p>
+</body>
+
+<script>
+	var cars = [ "car1", "car2", "car3" ];
+	
+	var person = {
+			name:"kim",
+			age:25,
+			area:"kangwon"
+	}
+	var text = "";
+	var text2 = "";
+	var day;
+	switch (new Date().getDay()) {
+	case 0:
+		day = "Sunday";
+		break;
+	case 1:
+		day = "Monday";
+		break;
+	case 2:
+		day = "Tuseday";
+		break;
+	case 3:
+		day = "Wednesday";
+		break;
+	case 4:
+		day = "Thursday";
+		break;
+	case 5:
+		day = "Friday";
+		break;
+	case 6:
+		day = "Saturday";
+	}
+	document.getElementById('demo').innerHTML = day;
+
+	for (i = 0; i < cars.length; i++) {
+		text += cars[i] + "<br>"
+	}
+	document.getElementById('demo2').innerHTML = text;
+	
+	var x; 
+	for(x in person)
+	{
+		text2 += person[x] + " ";
+	}
+	document.getElementById('demo3').innerHTML = text2;
+	
+	var index = 0;
+	var text3 ="";
+	var cars3 = ["kia","bmw","audi"];
+	
+	while(cars[index])
+	{
+		text3 += cars3[index];
+		index++;
+	}
+	
+	document.getElementById('demo4').innerHTML = text3;
+</script>
+</html>

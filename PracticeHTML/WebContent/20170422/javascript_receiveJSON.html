@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!-- 
+    JSON stands for JavaScript Object Notation
+    JSON is lightweight data interchange format
+    JSON is language independent 
+ -->
+</head>
+
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+</body>
+
+<script>
+
+var text = '{"employees":['+
+	'{"firstName":""John, "lastName":"Doe"},'+
+	'{"firstName":"Anna", "lastName":"smith"},'+
+	'{"firstName":"peter", "lastName" :"John"}]}';
+	
+	obj = JSON.parse(text);
+	document.getElementById("demo").innerHTML =
+	obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
+
+</html>

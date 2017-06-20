@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" / "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<!-- Subject : JS Scope(local, global variable), Event, String Functions -->
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+
+<body>
+<p id = "demo">This is demo </p>
+<p id = "demo2"> This is demo2</p>
+<p id = "eventDemo">This is event Demo</p>
+<p id = "StringFunction">This is String demo</p>
+<p> In HTML, all global variables will become window variables.</p>
+
+<button type = "button" onclick = "document.getElementById('eventDemo').innerHTML = Date()">Click</button>
+<!-- This is a syntax of event : <some-HTML-element some-event='some JavaScript'>  -->
+</body>
+
+<script>
+	var carName = "global car";
+	var windowGlobalTest= "windowGlobal";
+	var stringFunctionTest = "This is a test string";
+	
+	function myFunction()
+	{
+		var carName = "local car"; // This is local variable	
+		document.getElementById('demo').innerHTML = carName;
+		document.getElementById('demo').style.color = "blue";
+		document.getElementById('demo').style.fontSize="large";
+		document.getElementById('demo2').innerHTML = window.windowGlobalTest;
+	}
+	
+	function stringFunction()
+	{
+		str = "Please visit Microsoft! and Microsoft!";
+		var length = stringFunctionTest.length;
+		var substringVar = stringFunctionTest.substr(1,4);
+		var changeStr = stringFunctionTest.replace('test','real');
+		var globalChange = str.replace(/Microsoft/g, "W3Schools");
+		var upperString = stringFunctionTest.toUpperCase();
+
+		
+		document.getElementById('StringFunction').innerHTML = length + " / " + substringVar + " / "  + changeStr + " / " + globalChange + " / " + upperString;
+	}
+	
+	myFunction();
+	stringFunction();
+	
+</script>
+</html>

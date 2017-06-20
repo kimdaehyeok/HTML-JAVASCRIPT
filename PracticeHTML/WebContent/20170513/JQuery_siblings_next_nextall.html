@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<script>
+	$(document).ready(function() {
+/* 		$("span").parent().css({
+			"color" : "red",
+			"border" : "2px solid red"
+		});
+
+		$("div").find("span").css({
+			"color" : "red",
+			"border" : "2px solid red"
+		}); */
+		
+		$("h2").siblings().css({"color": "red", "border": "2px solid red"});
+		$("h2").next().css({"color":"blue", "border":"2px solid blue"});
+		$("h3").nextAll().css({"color":"yellow","border":"2px solid yellow"});
+		$("h2")
+	});
+</script>
+
+<style>
+/* .ancestors * {
+	display: block;
+	border: 2px solid lightgrey;
+	color: lightgrey;
+	padding: 5px;
+	margin: 15px;
+}
+
+.descendants * {
+	display: block;
+	border: 2px solid lightgrey;
+	color: lightgrey;
+	padding: 5px;
+	margin: 15px;
+} */
+
+.siblings * {
+	display: block;
+	border: 2px solid lightgrey;
+	color: lightgrey;
+	padding: 5px;
+	margin: 15px;
+}
+</style>
+<body>
+<!-- 	<div class="ancestors">
+		<div style="width: 500px;">
+			div (great-grandparent)
+			<ul>
+				ul (grandparent)
+				<li>li (direct parent) <span>span</span>
+				</li>
+			</ul>
+		</div>
+
+		<div style="width: 500px;">
+			div (grandparent)
+			<p>
+				p (direct parent) <span>span</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="descendants" style="width: 500px;">
+		div (current element)
+		<p>
+			p (child) <span>span (grandchild)</span>
+		</p>
+		<p>
+			p (child) <span>span (grandchild)</span>
+		</p>
+	</div>
+
+	<div class="descendants" style="width: 500px;">
+		div (current element)
+		<p>
+			p (child) <span>span (grandchild)</span>
+		</p>
+		<p>
+			p (child) <span>span (grandchild)</span>
+		</p>
+	</div> -->
+
+	<div class="siblings">
+		div (parent)
+		<p>p</p>
+		<span>span</span>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<h4>h4</h4>
+		<h5>h5</h5>
+		<h6>h6</h6>
+		<p>p</p>
+
+	</div>
+</body>
+
+</html>

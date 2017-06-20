@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Insert title here</title>
+</head>
+
+<script>
+
+$(document).ready(function(){
+	$("div p").first().css("background-color","yellow");
+	$("div p").last().css("background-color","red");
+	$("p").filter(".intro").css("background-color","blue"); // reverse : not
+});
+
+</script>
+<body>
+	<h1 class="not">Welcome to My Homepage</h1>
+
+	<p>This is the first paragraph in body.</p>
+
+	<div style="border: 1px solid black;">
+		<p>This is the first paragraph in a div.</p>
+		<p class="intro">This is the last paragraph in a div.</p>
+	</div>
+	<br>
+
+	<div style="border: 1px solid black;">
+		<p>This is the first paragraph in another div.</p>
+		<p class="intro">This is the last paragraph in another div.</p>
+	</div>
+
+	<p class="notS">This is the last paragraph in body.</p>
+</body>
+
+</html>

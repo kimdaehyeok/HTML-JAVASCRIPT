@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Insert title here</title>
+</head>
+
+<script>
+	$(document).ready(function() {
+		$("#flip").click(function() {
+			$("#panel").slideToggle(5000);
+		});
+
+		$("#animate").click(function() {
+			$("#box").animate({
+				left : '250px'
+			});
+		});
+
+		$("#stopButton").click(function() {
+			$("#panel").stop();
+		});
+
+		$("#startButton").click(function() {
+			$("#panel").slideDown();
+		});
+
+		$("#hide").click(function() {
+			$("#callback").hide("slow", function() {
+				alert("hide finish");
+			})
+		});
+		
+		$("#chainingButton").click(function(){
+			$("#chaining").css("color","red").slideUp(2000).slideDown(2000);
+		});
+
+	});
+</script>
+<style>
+#panel, #flip {
+	padding: 5px;
+	text-align: center;
+	background-color: #e5eecc;
+	border: solid 1px #c3c3c3;
+}
+
+#panel {
+	padding: 50px;
+	display: none;
+}
+</style>
+<body>
+	<div id="flip">Click to slide down panel</div>
+	<div id="panel">Hello world!</div>
+	<button id="stopButton">slide down stop button</button>
+	<button id="startButton">slide down start button</button>
+
+	<p>animate box</p>
+	<button id="animate">Start Animation</button>
+	<div id="box" style="background: red; height: 100px; width: 100px; position: absolute"></div>
+
+	<p>callback(hide)</p>
+	<button id="hide">Hide</button>
+
+	<p id="callback">This is a paragraph with little content.</p>
+
+	<p id="chaining">jQuery is fun!!</p>
+
+	<button id="chainingButton">Click me</button>
+
+
+</body>
+</html>
