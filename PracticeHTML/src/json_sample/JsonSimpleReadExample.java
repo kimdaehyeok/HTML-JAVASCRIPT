@@ -18,7 +18,7 @@ public class JsonSimpleReadExample
 
         try {
 
-            //Get Object
+            //Get Object 
             Object obj = parser.parse(new FileReader("C:/HttpRoot/test.json"));
             
             //Create JSON Object
